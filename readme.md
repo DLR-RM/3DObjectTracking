@@ -6,7 +6,7 @@ Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-S
 Accapted paper at ACCV 2020
 
 ## Overview
-![](cover.png)
+![](dlr_rbgt_visualization.png)
 
 ### Abstract
 We propose a novel, highly efficient sparse approach to region-based 6DoF object tracking that requires only a monocular RGB camera and the 3D object model. The key contribution of our work is a probabilistic model that considers image information sparsely along correspondence lines. For the implementation, we provide a highly efficient discrete scale-space formulation. In addition, we derive a novel mathematical proof that shows that our proposed likelihood function follows a Gaussian distribution. Based on this information, we develop robust approximations for the derivatives of the log-likelihood that are used in a regularized Newton optimization. In multiple experiments, we show that our approach outperforms state-of-the-art region-based methods in terms of tracking success while being about one order of magnitude faster.
@@ -14,7 +14,7 @@ We propose a novel, highly efficient sparse approach to region-based 6DoF object
 ### Videos
 <a href="https://www.youtube.com/watch?v=TkS0Wkd_0lA&ab_channel=DLRRMC">
 <p align="center">
- <img src="video_thumbnail_RBOT.png" height=300>
+ <img src="dlr_thumbnail_video_rbot.png" height=300>
     <br>
     <em>Approach and Evaluation on RBOT Dataset</em>
 </p>
@@ -22,7 +22,7 @@ We propose a novel, highly efficient sparse approach to region-based 6DoF object
 
 <a href="https://www.youtube.com/watch?v=lwhxSRpwn3Y&ab_channel=DLRRMC">
 <p align="center">
- <img src="video_thumbnail_real-world.png" height=300>
+ <img src="dlr_thumbnail_video_real-world.png" height=300>
     <br>
     <em>Real-World Experiments</em>
 </p>
