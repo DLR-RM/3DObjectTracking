@@ -466,6 +466,8 @@ void RegionModality::PrecalculateCameraVariables() {
   ppv_ = camera_ptr_->intrinsics().ppv;
   image_width_minus_1_ = camera_ptr_->image().cols - 1;
   image_height_minus_1_ = camera_ptr_->image().rows - 1;
+  image_width_minus_2_ = camera_ptr_->image().cols - 2;
+  image_height_minus_2_ = camera_ptr_->image().rows - 2;
 }
 
 void RegionModality::PrecalculatePoseVariables() {
@@ -636,10 +638,10 @@ bool RegionModality::CalculateSegmentProbabilities(
     float v_f = center_v + v_step * (float(u) - center_u) + 0.5f;
     float v_f_end = v_f + v_step * float(line_length_minus_1_);
 
-    // Check if line is on image
+    // Check if line is on image (margin of 1 for rounding errors of v_f_end)
     if (u < 0 || u_end > image_width_minus_1_ || int(v_f) < 0 ||
-        int(v_f) > image_height_minus_1_ || int(v_f_end) < 0 ||
-        int(v_f_end) > image_height_minus_1_) {
+        int(v_f) > image_height_minus_1_ || int(v_f_end) < 1 ||
+        int(v_f_end) > image_height_minus_2_) {
       return false;
     }
 
@@ -692,10 +694,10 @@ bool RegionModality::CalculateSegmentProbabilities(
     float u_f = center_u + u_step * (float(v) - center_v) + 0.5f;
     float u_f_end = u_f + u_step * float(line_length_minus_1_);
 
-    // Check if line is on image
+    // Check if line is on image (margin of 1 for rounding errors of u_f_end)
     if (v < 0 || v_end > image_height_minus_1_ || int(u_f) < 0 ||
-        int(u_f) > image_width_minus_1_ || int(u_f_end) < 0 ||
-        int(u_f_end) > image_width_minus_1_) {
+        int(u_f) > image_width_minus_1_ || int(u_f_end) < 1 ||
+        int(u_f_end) > image_width_minus_2_) {
       return false;
     }
 

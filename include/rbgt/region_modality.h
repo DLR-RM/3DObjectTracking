@@ -264,6 +264,8 @@ class RegionModality {
   float ppv_{};
   int image_width_minus_1_{};
   int image_height_minus_1_{};
+  int image_width_minus_2_{};
+  int image_height_minus_2_{};
 
   // Precalculated variables for poses (continuously changing)
   Transform3fA body2camera_pose_;
