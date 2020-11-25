@@ -3,7 +3,7 @@
 ## A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking
 Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer
 
-Accapted paper at ACCV 2020
+Accepted paper at ACCV 2020: [paper](https://openaccess.thecvf.com/content/ACCV2020/papers/Stoiber_A_Sparse_Gaussian_Approach_to_Region-Based_6DoF_Object_Tracking_ACCV_2020_paper.pdf), [supplementary](https://openaccess.thecvf.com/content/ACCV2020/supplemental/Stoiber_A_Sparse_Gaussian_ACCV_2020_supplemental.zip)
 
 ## Overview
 ![](dlr_rbgt_visualization.png)
@@ -54,11 +54,12 @@ If you want to use our tracker for your own project, we would like to refer you 
 If you find our work useful, please cite us with: 
 
 ```
-@inproceedings{stoiber2020,
-  title={A Sparse Gaussian Approach to Region-Based {6DoF} Object Tracking},
-  author={Stoiber, Manuel and Pfanne, Martin and Strobl, Klaus H. and Triebel, Rudolph and Albu-Schäffer, Alin},
-  booktitle={Proceedings of the Asian Conference on Computer Vision (ACCV)},
-  year={2020}
+@InProceedings{Stoiber_2020_ACCV,
+    author    = {Stoiber, Manuel and Pfanne, Martin and Strobl, Klaus H. and Triebel, Rudolph and Albu-Schaeffer, Alin},
+    title     = {A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking},
+    booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV)},
+    month     = {November},
+    year      = {2020}
 }
 ```
 
