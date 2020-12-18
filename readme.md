@@ -2,8 +2,9 @@
 
 ## A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking
 Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer
+Best Paper Award, ACCV 2020
 
-Accepted paper at ACCV 2020: [paper](https://openaccess.thecvf.com/content/ACCV2020/papers/Stoiber_A_Sparse_Gaussian_Approach_to_Region-Based_6DoF_Object_Tracking_ACCV_2020_paper.pdf), [supplementary](https://openaccess.thecvf.com/content/ACCV2020/supplemental/Stoiber_A_Sparse_Gaussian_ACCV_2020_supplemental.zip)
+[paper](https://openaccess.thecvf.com/content/ACCV2020/papers/Stoiber_A_Sparse_Gaussian_Approach_to_Region-Based_6DoF_Object_Tracking_ACCV_2020_paper.pdf), [supplementary](https://openaccess.thecvf.com/content/ACCV2020/supplemental/Stoiber_A_Sparse_Gaussian_ACCV_2020_supplemental.zip)
 
 ## Overview
 ![](dlr_rbgt_visualization.png)
@@ -12,11 +13,11 @@ Accepted paper at ACCV 2020: [paper](https://openaccess.thecvf.com/content/ACCV2
 We propose a novel, highly efficient sparse approach to region-based 6DoF object tracking that requires only a monocular RGB camera and the 3D object model. The key contribution of our work is a probabilistic model that considers image information sparsely along correspondence lines. For the implementation, we provide a highly efficient discrete scale-space formulation. In addition, we derive a novel mathematical proof that shows that our proposed likelihood function follows a Gaussian distribution. Based on this information, we develop robust approximations for the derivatives of the log-likelihood that are used in a regularized Newton optimization. In multiple experiments, we show that our approach outperforms state-of-the-art region-based methods in terms of tracking success while being about one order of magnitude faster.
 
 ### Videos
-<a href="https://www.youtube.com/watch?v=TkS0Wkd_0lA&ab_channel=DLRRMC">
+<a href="https://www.youtube.com/watch?v=Y-nFAuElE1I&ab_channel=DLRRMC">
 <p align="center">
- <img src="dlr_thumbnail_video_rbot.png" height=300>
+ <img src="dlr_thumbnail_video_oral.png" height=300>
     <br>
-    <em>Approach and Evaluation on RBOT Dataset</em>
+    <em>Oral Presentation ACCV 2020</em>
 </p>
 </a>
 
@@ -25,6 +26,14 @@ We propose a novel, highly efficient sparse approach to region-based 6DoF object
  <img src="dlr_thumbnail_video_real-world.png" height=300>
     <br>
     <em>Real-World Experiments</em>
+</p>
+</a>
+
+<a href="https://www.youtube.com/watch?v=TkS0Wkd_0lA&ab_channel=DLRRMC">
+<p align="center">
+ <img src="dlr_thumbnail_video_rbot.png" height=300>
+    <br>
+    <em>Approach and Evaluation on RBOT Dataset</em>
 </p>
 </a>
 
