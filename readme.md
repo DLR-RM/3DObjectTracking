@@ -8,5 +8,6 @@ The algorithms corresponding to the following papers are included:
 * [__RBGT__](https://github.com/DLR-RM/3DObjectTracking/tree/master/RBGT)
 Stoiber M, Pfanne M, Strobl KH, Triebel R, Albu-Schäffer A (2020) A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking. In: Asian Conference on Computer Vision
 * [__SRT3D__](https://github.com/DLR-RM/3DObjectTracking/tree/master/SRT3D)
+Stoiber M, Pfanne M, Strobl KH, Triebel R, Albu-Schäffer A (2021) SRT3D: A Sparse Region-Based 3D Object Tracking Approach for the Real World
 
 
