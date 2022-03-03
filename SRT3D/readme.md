@@ -5,7 +5,7 @@
 ### Paper
 SRT3D: A Sparse Region-Based 3D Object Tracking Approach for the Real World  
 Manuel Stoiber, Martin Pfanne, Klaus H. Strobl, Rudolph Triebel, and Alin Albu-Schäffer  
-Submitted to the International Journal of Computer Vision: [Paper](https://arxiv.org/abs/2110.12715)
+International Journal of Computer Vision: [Paper](https://arxiv.org/abs/2110.12715)
 
 ### Abstract
 Region-based methods have become increasingly popular for model-based, monocular 3D tracking of texture-less objects in cluttered scenes. However, while they achieve state-of-the-art results, most methods are computationally expensive, requiring significant resources to run in real-time. In the following, we build on our previous work and develop SRT3D, a sparse region-based approach to 3D object tracking that bridges this gap in efficiency. Our method considers image information sparsely along so-called correspondence lines that model the probability of the object's contour location. We thereby improve on the current state of the art and introduce smoothed step functions that consider a defined global and local uncertainty. For the resulting probabilistic formulation, a thorough analysis is provided. Finally, we use a pre-rendered sparse viewpoint model to create a joint posterior probability for the object pose. The function is maximized using second-order Newton optimization with Tikhonov regularization. During the pose estimation, we differentiate between global and local optimization, using a novel approximation for the first-order derivative employed in the Newton method. In multiple experiments, we demonstrate that the resulting algorithm improves the current state of the art both in terms of runtime and quality, performing particularly well for noisy and cluttered images encountered in the real world.
@@ -36,12 +36,11 @@ If you want to use our tracker for your own project, we would like to refer you 
 If you find our work useful, please cite us with: 
 
 ```
-@Misc{Stoiber2021,
-    author          = {Stoiber, Manuel and Pfanne, Martin and Strobl, Klaus H. and Triebel, Rudolph and Albu-Schaeffer, Alin},
-    title           = {SRT3D: A Sparse Region-Based 3D Object Tracking Approach for the Real World},
-    archiveprefix   = {arXiv},
-    eprint          = {2110.12715},
-    year            = {2021}
+@Article{Stoiber_2022_IJCV,
+  author  = {Stoiber, Manuel and Pfanne, Martin and Strobl, Klaus H. and Triebel, Rudolph and Albu-Schaeffer, Alin},
+  journal = {International Journal of Computer Vision},
+  title   = {SRT3D: A Sparse Region-Based 3D Object Tracking Approach for the Real World},
+  year    = {2022}
 }
 ```
 
