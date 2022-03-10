@@ -1,0 +1,63 @@
+%YAML:1.2
+AzureKinectColorCamera:
+  - name: "azure_kinect_color"
+
+AzureKinectDepthCamera:
+  - name: "azure_kinect_depth"
+
+NormalColorViewer:
+  - name: "color_viewer"
+    color_camera: "azure_kinect_color"
+    renderer_geometry: "renderer_geometry"
+
+NormalDepthViewer:
+  - name: "depth_viewer"
+    depth_camera: "azure_kinect_depth"
+    renderer_geometry: "renderer_geometry"
+
+RendererGeometry:
+  - name: "renderer_geometry"
+    bodies: ["triangle"]
+
+Body:
+  - name: "triangle"
+    metafile_path: "./triangle.yaml"
+
+ManualDetector:
+  - name: "triangle_manual_detector"
+    metafile_path: "./triangle_manual_detector.yaml"
+    body: "triangle"
+    color_camera: "azure_kinect_color"
+
+RegionModel:
+  - name: "triangle_region_model"
+    metafile_path: "./default_model.yaml"
+    body: "triangle"
+
+DepthModel:
+  - name: "triangle_depth_model"
+    metafile_path: "./default_model.yaml"
+    body: "triangle"
+
+RegionModality:
+  - name: "triangle_region_modality"
+    body: "triangle"
+    color_camera: "azure_kinect_color"
+    region_model: "triangle_region_model"
+    measure_occlusions: {depth_camera: "azure_kinect_depth"}
+
+DepthModality:
+  - name: "triangle_depth_modality"
+    body: "triangle"
+    depth_camera: "azure_kinect_depth"
+    depth_model: "triangle_depth_model"
+
+Optimizer:
+  - name: "triangle_optimizer"
+    modalities: ["triangle_region_modality", "triangle_depth_modality"]
+
+Tracker:
+  - name: "tracker"
+    viewers: ["color_viewer", "depth_viewer"]
+    detectors: ["triangle_manual_detector"]
+    optimizers: ["triangle_optimizer"]
