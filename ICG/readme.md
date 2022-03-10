@@ -147,6 +147,40 @@ detector_image_path: "./detector_image.png"
 - `reference_points`: 3D points on the object surface given in the body frame. During manual detection, the user has to specify the corresponding 2D coordinates of those points in the image to define the object pose.
 - `detector_image_path`: optional image that illustrates on which points the user has to click.
 
+#### LoaderColorCamera / LoaderDepthCamera
+```
+load_directory: "./"
+intrinsics:
+   f_u: 638.633
+   f_v: 638.377
+   pp_x: 639.451
+   pp_y: 366.379
+   width: 1280
+   height: 720
+camera2world_pose: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [ 1., 0., 0., 0.,
+            0., 1., 0., 0.,
+            0., 0., 1., 0.,
+            0., 0., 0., 1. ]
+depth_scale: 0.001    # only for depth camera
+image_name_pre: "color_camera_image_"
+load_index: 0
+n_leading_zeros: 0
+image_name_post: ""
+load_image_type: "png"
+```
+- `load_directory`: directory from which images are loaded.
+- `intrinsics`: intrinsics of the camera that was used to record images, with fu, fv, ppu, ppv, width, and height, respectively.
+- `depth_scale`: scale with which pixel values have to be multiplied to get the depth in meter. (only required for depth cameras)
+- `image_name_pre`: text at the beginning of image name, before load_index.
+- `load_index`: index of the first image that is loaded.
+- `n_leading_zeros`: minimum number of digits used in the image name with zero padding to reach correct number.
+- `image_name_post`: text at the end of image name, after load_index.
+- `load_image_type`: file format of images.
+
 To start tracking your own objects, we recommend defining your own metafile for `Body` and `StaticDetector` and use the `examples/run_on_camera_sequence.cpp`. Note that depending on the parameters for the `RunTrackerProcess` function of the `Tracker` class, detection and tracking will not start automatically. To start the detection, please press the D key on your keyboard. For tracking, the T key has to be pressed. To quit the application, press Q. If you would like to use the RealSense camera instead of the AzureKinect, please replace `#include <icg/azure_kinect_camera.h>` with `#include <icg/realsense_camera.h>` and all occurences of `AzureKinectColorCamera` and `AzureKinectDepthCamera` with `RealSenseColorCamera` and `RealSenseDepthCamera`. If you would like to use another camera than the RealSense or Azure Kinect, we encourage you to create a class similar to the `AzureKinectCamera` class in src/azure_kinect_camera.cpp. To use results from the tracker in your own application, you can implement your own `Publisher` class that implements the method `UpdatePublisher()`.
 
 In addition to this short overview, detailed information on all objects and parameters can be found in the [Documentation](annotated.html), which can be generated using *Doxygen* with *dot*.
