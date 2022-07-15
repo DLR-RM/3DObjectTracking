@@ -67,7 +67,7 @@ If you find our work useful, please cite us with:
     booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV)},
     month     = {November},
     year      = {2020},
-    page      = {666–682}
+    pages     = {666–682}
 }
 ```
 
