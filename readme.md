@@ -2,7 +2,7 @@
 
 Tracking a rigid object in 3D space and determining its 6DoF pose is an essential task in computer vision. Its application ranges from augmented reality to robotic perception. Given consecutive image frames and a 3D model of the object, the goal is to robustly estimate both the rotation and translation of a known object relative to the camera. While the problem has been thoroughly studied, many challenges such as partial occlusions, appearance changes, motion blur, background clutter, and real-time requirements still exist.
 
-In this repository, we will continuously publish algorithms and code of our ongoing research on 3D object tracking. The folders for the different algorithms include everything necessary to reproduce results presented in our papers and to support full reusability in different projects and applications.
+In this repository, we will continuously publish algorithms and code of our ongoing research on 3D object tracking. The folders for the different algorithms include everything necessary to reproduce results presented in our papers. Note that the code for each new paper also includes an updated version of previous work. If you want to use our tracker in your own project or application, please use the code from the latest publication. Currently, the latest version of our code can be found in the folder [__ICG__](https://github.com/DLR-RM/3DObjectTracking/tree/master/ICG).
 
 The algorithms corresponding to the following papers are included:
 * [__RBGT__](https://github.com/DLR-RM/3DObjectTracking/tree/master/RBGT)

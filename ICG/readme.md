@@ -4,12 +4,20 @@
 Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects  
 Manuel Stoiber, Martin Sundermeyer, Rudolph Triebel  
 Conference on Computer Vision and Pattern Recognition (CVPR) 2022  
-[Paper](https://arxiv.org/abs/2203.05334)
+[Paper](https://openaccess.thecvf.com/content/CVPR2022/papers/Stoiber_Iterative_Corresponding_Geometry_Fusing_Region_and_Depth_for_Highly_Efficient_CVPR_2022_paper.pdf), [supplementary](https://openaccess.thecvf.com/content/CVPR2022/supplemental/Stoiber_Iterative_Corresponding_Geometry_CVPR_2022_supplemental.pdf)
 
 ## Abstract
 Tracking objects in 3D space and predicting their 6DoF pose is an essential task in computer vision. State-of-the-art approaches often rely on object texture to tackle this problem. However, while they achieve impressive results, many objects do not contain sufficient texture, violating the main underlying assumption. In the following, we thus propose ICG, a novel probabilistic tracker that fuses region and depth information and only requires the object geometry. Our method deploys correspondence lines and points to iteratively refine the pose. We also implement robust occlusion handling to improve performance in real-world settings. Experiments on the YCB-Video, OPT, and Choi datasets demonstrate that, even for textured objects, our approach outperforms the current state of the art with respect to accuracy and robustness. At the same time, ICG shows fast convergence and outstanding efficiency, requiring only 1.3 ms per frame on a single CPU core. Finally, we analyze the influence of individual components and discuss our performance compared to deep learning-based methods. The source code of our tracker is publicly available.
 
 ## Videos
+<a href="https://www.youtube.com/watch?v=eYd_3TnJIaE">
+<p align="center">
+ <img src="dlr_icg_video_presentation.png" height=300>
+    <br> 
+    <em>Presentation CVPR 2022</em>
+</p>
+</a>
+
 <a href="https://youtu.be/qMr1RHCsnDk?t=10">
 <p align="center">
  <img src="dlr_icg_video_real-world.png" height=300>
@@ -197,6 +205,8 @@ If you find our work useful, please cite us with:
     author    = {Stoiber, Manuel and Sundermeyer, Martin and Triebel, Rudolph},
     title     = {Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year      = {2022}
+    month     = {June},
+    year      = {2022},
+    pages     = {6855-6865}
 }
 ```

@@ -66,7 +66,8 @@ If you find our work useful, please cite us with:
     title     = {A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking},
     booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV)},
     month     = {November},
-    year      = {2020}
+    year      = {2020},
+    page      = {666–682}
 }
 ```
 
