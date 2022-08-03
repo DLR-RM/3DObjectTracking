@@ -1,7 +1,7 @@
 # Mb-ICG: Multi-body ICG
 
 ## Paper
-A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures
+A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures  
 Manuel Stoiber, Martin Sundermeyer, Wout Boerdijk, Rudolph Triebel  
 Submitted to IEEE Transactions on Pattern Analysis and Machine Intelligence
 [Preprint](https://arxiv.org/pdf/2208.01502.pdf)
