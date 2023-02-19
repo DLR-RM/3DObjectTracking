@@ -24,7 +24,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 <a href="https://youtu.be/0ORZvDDbDjA">
 <p align="center">
- <img src="Mb-ICG/dlr_mb_icg_real_world.png" width=500>
+ <img src="Mb-ICG/dlr_mb_icg_real_world.png" width=600>
     <br> 
     <em>A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures</em>
 </p>
@@ -32,7 +32,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 <a href="https://www.youtube.com/watch?v=NfNzxXupX54">
 <p align="center">
- <img src="ICG+/dlr_icg+_video.png" width=500>
+ <img src="ICG+/dlr_icg+_video.png" width=600>
     <br> 
     <em>Fusing Visual Appearance and Geometry for Multi-Modality 6DoF Object Tracking</em>
 </p>
@@ -40,7 +40,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 <a href="https://www.youtube.com/watch?v=eYd_3TnJIaE">
 <p align="center">
- <img src="ICG/dlr_icg_video_presentation.png" width=500>
+ <img src="ICG/dlr_icg_video_presentation.png" width=600>
     <br> 
     <em>Presentation CVPR 2022</em>
 </p>
@@ -48,7 +48,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 <a href="https://youtu.be/qMr1RHCsnDk">
 <p align="center">
- <img src="ICG/dlr_icg_video_real-world.png" width=500>
+ <img src="ICG/dlr_icg_video_real-world.png" width=600>
     <br> 
     <em>Iterative Corresponding Geometry</em>
 </p>
@@ -56,7 +56,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 <a href="https://www.youtube.com/watch?v=Y-nFAuElE1I&ab_channel=DLRRMC">
 <p align="center">
- <img src="RBGT/dlr_thumbnail_video_oral.png" width=500>
+ <img src="RBGT/dlr_thumbnail_video_oral.png" width=600>
     <br>
     <em>Oral Presentation ACCV 2020</em>
 </p>
@@ -64,7 +64,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 <a href="https://www.youtube.com/watch?v=lwhxSRpwn3Y&ab_channel=DLRRMC">
 <p align="center">
- <img src="RBGT/dlr_thumbnail_video_real-world.png" width=500>
+ <img src="RBGT/dlr_thumbnail_video_real-world.png" width=600>
     <br>
     <em>A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking</em>
 </p>
@@ -72,7 +72,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 
 <a href="https://www.youtube.com/watch?v=TkS0Wkd_0lA&ab_channel=DLRRMC">
 <p align="center">
- <img src="RBGT/dlr_thumbnail_video_rbot.png" width=500>
+ <img src="RBGT/dlr_thumbnail_video_rbot.png" width=600>
     <br>
     <em>A Sparse Gaussian Approach to Region-Based 6DoF Object Tracking</em>
 </p>
