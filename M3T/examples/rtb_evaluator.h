@@ -34,7 +34,7 @@
 #include <vector>
 
 /**
- * \brief Class that holds a tracker to evaluate it on the Multi-body dataset.
+ * \brief Class that holds a tracker to evaluate it on the RTB dataset.
  * \details It includes functionality to calculate mean vertex errors, compute
  * non-symmetric AUC (Area Under Curve) scores, measure execution times, and
  * save results to a file.
