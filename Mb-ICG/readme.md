@@ -80,15 +80,15 @@ To generate your own data similar to sequences provided in the *RTB* dataset, pl
 ## Code
 The *Mb-ICG* tracker was fully integrated into the multi-body, multi-modality, and multi-camera tracking library *M3T*.
 In contrast to *Mb-ICG*, *M3T* provides additional functionality, such as a keypoint-based texture modality, capabilities for multi-region tracking, and soft constraints.
-Note that it was ensured that evaluation results for *Mb-ICG* and *M3T* are exactly the same.
-If you would like to reproduce results from our publication or use the tracker in your own application, please use the code for *M3T* from the following [directory](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T).
+Note that it was ensured that the evaluation results for *Mb-ICG* and *M3T* are exactly the same.
+If you would like to reproduce results from our publication or use the tracker in your own application, please use *M3T's* code from the following [directory](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T).
 
 
 ## Evaluation
-The [code](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T/examples) in `examples/evaluate_RTB_dataset.cpp` and `examples/parameters_study_RTB.cpp` was used for the evaluation on the [RTB](https://zenodo.org/record/7548537) dataset.
+The [code](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T/examples) in `examples/evaluate_RTB_dataset.cpp` and `examples/parameters_study_RTB.cpp` was used for the evaluation on the [RTB dataset](https://zenodo.org/record/7548537).
 To reproduce results, please download the dataset and adjust the `dataset_directory` in the source code.
 Files for sparse viewpoint models will be created automatically and are stored in the specified `external_directory`.
-To reproduce the evaluation results of *DART* on the *RTB* dataset, please unzip the `poses_rtb.zip` file and store its content in the respective `external_directory`.
+To reproduce the evaluation results of *DART* on the *RTB* dataset, please unzip the `data/rtb_poses.zip` file and store its content in the respective `external_directory`.
 In the code, you can then set `evaluator.set_evaluate_external(true);` and `evaluator.set_external_results_folder("dart");`.
 Convergence experiments for the proposed constraints can be reproduced using `examples/constraint_convergence.cpp`.
 To evaluate orthogonality constraints, which ensure that axes of reference frames are orthogonal, set the parameter in `include/m3t/constaint.h` to `kOrthogonalityConstraintExperiment = true`.
@@ -100,7 +100,7 @@ In both experiments, outputs are generated that can be used together with the *L
 If you find our work useful, please cite us with: 
 
 ```
-@Article{Stoiber2023,
+@Article{Stoiber_2023_TPAMI,
   	author = {Stoiber, Manuel and Sundermeyer, Martin and Boerdijk, Wout and Triebel, Rudolph},
     title  = {A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures},
     year   = {2023},
