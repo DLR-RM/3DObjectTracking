@@ -1,0 +1,27 @@
+%YAML:1.2
+load_directory: "./"
+intrinsics:
+  f_u: 425.773
+  f_v: 425.773
+  pp_x: 427.202
+  pp_y: 237.662
+  width: 848
+  height: 480
+camera2world_pose: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: d
+  data: [0.99985489,    0.00778240,    0.01509715,    0.01453388,
+         -0.00782678,    0.99996543,    0.00288261,    0.00013995,
+         -0.01507424,    -0.00300036,    0.99988175,    0.00051057,
+         0,    0,    0,    1 ]
+depth_scale: 0.001
+save_directory: "./test/"
+save_index: 0
+save_image_type: "png"
+save_images: 0
+image_name_pre: "depth_camera_image_"
+load_index: 200
+n_leading_zeros: 0
+image_name_post: ""
+load_image_type: "png"

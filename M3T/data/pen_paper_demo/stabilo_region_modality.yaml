@@ -1,0 +1,6 @@
+%YAML:1.2
+use_adaptive_coverage: 1
+reference_contour_length: 0.23
+measured_occlusion_threshold: 0.01
+
+# visualize_lines_correspondence: 1

@@ -1,0 +1,15 @@
+%YAML:1.2
+geometry_path: "triangle.obj"
+geometry_unit_in_meter: 1.0
+geometry_counterclockwise: 1
+geometry_enable_culling: 1
+geometry2body_pose: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: d
+  data: [ 1., 0, 0, 0,
+          0, 1., 0, 0,
+          0, 0, 1., -0.006,
+          0, 0, 0, 1. ]
+body_id: 150
+region_id: 150

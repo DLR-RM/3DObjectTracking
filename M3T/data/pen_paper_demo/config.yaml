@@ -1,0 +1,142 @@
+%YAML:1.2
+AzureKinectColorCamera:
+  - name: color_camera
+    metafile_path: config.yaml
+
+AzureKinectDepthCamera:
+  - name: depth_camera
+    metafile_path: config.yaml
+
+NormalColorViewer:
+  - name: color_viewer
+    metafile_path: config.yaml
+    color_camera: color_camera
+    renderer_geometry: renderer_geometry
+
+NormalDepthViewer:
+  - name: depth_viewer
+    metafile_path: config.yaml
+    depth_camera: depth_camera
+    renderer_geometry: renderer_geometry
+
+RendererGeometry:
+  - name: renderer_geometry
+    bodies: [stabilo, paper]
+
+FocusedSilhouetteRenderer:
+  - name: silhouette_renderer_texture
+    renderer_geometry: renderer_geometry
+    camera: color_camera
+    referenced_bodies: [stabilo]
+
+Body:
+  - name: stabilo
+    metafile_path: stabilo_body.yaml
+  - name: stabilo_body
+    metafile_path: stabilo_body.yaml
+  - name: stabilo_tip
+    metafile_path: stabilo_body.yaml
+  - name: paper
+    metafile_path: paper_body.yaml
+
+RegionModel:
+  - name: stabilo_tip_region_model
+    metafile_path: default_model.yaml
+    body: stabilo_tip
+    fixed_bodies: [stabilo_body]
+  - name: stabilo_body_region_model
+    metafile_path: default_model.yaml
+    body: stabilo_body
+    fixed_bodies: [stabilo_tip]
+  - name: paper_region_model
+    metafile_path: default_model.yaml
+    body: paper
+
+DepthModel:
+  - name: stabilo_depth_model
+    metafile_path: default_model.yaml
+    body: stabilo
+  - name: paper_depth_model
+    metafile_path: default_model.yaml
+    body: paper
+
+RegionModality:
+  - name: stabilo_tip_region_modality
+    metafile_path: stabilo_region_modality.yaml
+    body: stabilo
+    color_camera: color_camera
+    region_model: stabilo_tip_region_model
+    measure_occlusions: {depth_camera: depth_camera}
+  - name: stabilo_body_region_modality
+    metafile_path: stabilo_region_modality.yaml
+    body: stabilo
+    color_camera: color_camera
+    region_model: stabilo_body_region_model
+    measure_occlusions: {depth_camera: depth_camera}
+  - name: paper_region_modality
+    metafile_path: config.yaml
+    body: paper
+    color_camera: color_camera
+    region_model: paper_region_model
+    measure_occlusions: {depth_camera: depth_camera}
+
+DepthModality:
+  - name: stabilo_depth_modality
+    metafile_path: config.yaml
+    body: stabilo
+    depth_camera: depth_camera
+    depth_model: stabilo_depth_model
+  - name: paper_depth_modality
+    metafile_path: config.yaml
+    body: paper
+    depth_camera: depth_camera
+    depth_model: paper_depth_model
+
+TextureModality:
+  - name: stabilo_texture_modality
+    metafile_path: config.yaml
+    body: stabilo
+    color_camera: color_camera
+    focused_silhouette_renderer: silhouette_renderer_texture
+    measure_occlusions: {depth_camera: depth_camera}
+
+Link:
+  - name: stabilo_link
+    body: stabilo
+    modalities: [stabilo_tip_region_modality, stabilo_body_region_modality, stabilo_texture_modality, stabilo_depth_modality]    #optional
+  - name: paper_link
+    body: paper
+    modalities: [paper_region_modality, paper_depth_modality]
+
+Optimizer:
+  - name: stabilo_optimizer
+    root_link: stabilo_link
+  - name: paper_optimizer
+    root_link: paper_link
+
+StaticDetector:
+  - name: stabilo_detector
+    metafile_path: stabilo_detector.yaml
+    optimizer: stabilo_optimizer
+  - name: paper_detector
+    metafile_path: paper_detector.yaml
+    optimizer: paper_optimizer
+
+Tracker:
+  - name: tracker
+    metafile_path: config.yaml
+    viewers: [color_viewer, depth_viewer]
+    detectors: [stabilo_detector, paper_detector]
+    optimizers: [stabilo_optimizer, paper_optimizer]
+
+depth_offset: -0.013
+measure_occlusions: 1
+measured_occlusion_threshold: 0.01
+
+# visualization_time: 1
+# visualize_correspondences_correspondence: 1
+# visualize_lines_correspondence: 1
+# min_depth: 0.2
+# max_depth: 0.5
+# visualization_min_depth: 0.2
+# visualization_max_depth: 0.5

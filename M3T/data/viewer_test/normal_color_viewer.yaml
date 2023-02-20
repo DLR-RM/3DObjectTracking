@@ -1,0 +1,6 @@
+%YAML:1.2
+opacity: 0.7
+display_images: 1
+save_images: 0
+save_directory: "./test/"
+save_directory: "png"

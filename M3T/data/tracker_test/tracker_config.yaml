@@ -1,0 +1,70 @@
+%YAML:1.2
+LoaderColorCamera:
+  - name: "color_camera"
+    metafile_path: "../_sequence/color_camera.yaml"
+
+LoaderDepthCamera:
+  - name: "depth_camera"
+    metafile_path: "../_sequence/depth_camera.yaml"
+
+NormalColorViewer:
+  - name: "normal_viewer"
+    metafile_path: "tracker_config.yaml"
+    color_camera: "color_camera"
+    renderer_geometry: "renderer_geometry"
+
+RendererGeometry:
+  - name: "renderer_geometry"
+    bodies: ["triangle"]
+
+Body:
+  - name: "triangle"
+    metafile_path: "../_body/triangle.yaml"
+
+RegionModel:
+  - name: "triangle_region_model"
+    metafile_path: "../_body/triangle_region_model.yaml"
+    body: "triangle"
+
+DepthModel:
+  - name: "triangle_depth_model"
+    metafile_path: "../_body/triangle_depth_model.yaml"
+    body: "triangle"
+
+RegionModality:
+  - name: "triangle_region_modality"
+    body: "triangle"
+    color_camera: "color_camera"
+    region_model: "triangle_region_model"
+    measure_occlusions: {depth_camera: "depth_camera"}
+
+DepthModality:
+  - name: "triangle_depth_modality"
+    metafile_path: "tracker_config.yaml"
+    body: "triangle"
+    depth_camera: "depth_camera"
+    depth_model: "triangle_depth_model"
+
+Link:
+  - name: "triangle_link"
+    body: "triangle"
+    modalities: ["triangle_region_modality", "triangle_depth_modality"]
+
+Optimizer:
+  - name: "triangle_optimizer"
+    root_link: "triangle_link"
+
+StaticDetector:
+  - name: "triangle_detector"
+    metafile_path: "../_body/triangle_static_detector.yaml"
+    optimizer: "triangle_optimizer"
+
+Tracker:
+  - name: "tracker"
+    metafile_path: "tracker.yaml"
+    viewers: ["normal_viewer"]
+    detectors: ["triangle_detector"]
+    optimizers: ["triangle_optimizer"]
+
+measure_occlusions: 1
+display_images: 0

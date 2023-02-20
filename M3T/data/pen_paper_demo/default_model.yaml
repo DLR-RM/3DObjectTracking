@@ -1,0 +1,3 @@
+%YAML:1.2
+model_path: "INFER_FROM_NAME"
+sphere_radius: 0.5

@@ -1,0 +1,8 @@
+%YAML:1.2
+reference_points:
+  - [ -0.0332, 0.0, 0.0]
+  - [ 0.0192, -0.0332, 0.0]
+  - [ 0.0192, 0.0332, 0.0]
+  - [ 0.0, 0.0, 0.0]
+
+detector_image_path: "./triangle_manual_detector.png"

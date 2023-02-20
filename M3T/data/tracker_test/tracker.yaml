@@ -1,0 +1,7 @@
+%YAML:1.2
+n_corr_iterations: 7
+n_update_iterations: 2
+synchronize_cameras: 0
+cycle_duration: 30
+visualization_time: 1
+viewer_time: 1

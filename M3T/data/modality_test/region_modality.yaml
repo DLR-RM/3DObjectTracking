@@ -1,0 +1,47 @@
+%YAML:1.2
+n_lines: 200
+use_adaptive_coverage: 0
+reference_contour_length: 0.0
+min_continuous_distance: 3.0
+function_length: 8
+distribution_length: 12 
+function_amplitude: 0.43
+function_slope: 0.5
+learning_rate: 1.3
+n_global_iterations: 1
+scales: [6, 4, 2, 1]
+standard_deviations: [15.0, 5.0, 3.5, 1.5]
+
+n_histogram_bins: 16
+learning_rate_f: 0.2
+learning_rate_b: 0.2
+unconsidered_line_length: 0.5
+max_considered_line_length: 20.0
+
+measured_depth_offset_radius: 0.01
+measured_occlusion_radius: 0.01
+measured_occlusion_threshold: 0.03
+modeled_depth_offset_radius: 0.01
+modeled_occlusion_radius: 0.01
+modeled_occlusion_threshold: 0.03
+n_unoccluded_iterations: 10
+min_n_unoccluded_lines: 0
+
+visualize_pose_result: 0
+visualize_gradient_optimization: 0
+visualize_hessian_optimization: 0
+visualize_lines_correspondence: 0
+visualize_points_correspondence: 0
+visualize_points_depth_image_correspondence: 0
+visualize_points_depth_rendering_correspondence: 0
+visualize_points_silhouette_rendering_correspondence: 0
+visualize_points_optimization: 0
+visualize_points_histogram_image_optimization: 0
+visualize_points_result: 0
+visualize_points_histogram_image_result: 0
+visualization_min_depth: 0.0
+visualization_max_depth: 1.0
+display_visualization: 1
+save_visualizations: 0
+save_directory: "./"
+save_image_type: "png"

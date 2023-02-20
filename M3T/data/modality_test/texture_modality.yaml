@@ -1,0 +1,50 @@
+%YAML:1.2
+descriptor_type: 4
+focused_image_size: 200
+descriptor_distance_threshold: 0.7
+tukey_norm_constant: 20.0 
+standard_deviations: [10.0, 5.0]
+max_keyframe_rotation_difference: 0.34906585039885557
+max_keyframe_age: 1000
+n_keyframes: 1
+
+orb_n_features: 300
+orb_scale_factor: 1.2
+orb_n_levels: 3
+brisk_threshold: 25
+brisk_octave: 3
+brisk_pattern_scale: 0.6
+daisy_radius: 7.0
+daisy_q_radius: 3
+daisy_q_theta: 4
+daisy_q_hist: 8
+freak_orientation_normalized: 1
+freak_scale_normalized: 1
+freak_pattern_scale: 18.0
+freak_n_octaves: 4
+sift_n_features: 0
+sift_n_octave_layers: 5
+sift_contrast_threshold: 0.04
+sift_edge_threshold: 10.0
+sift_sigma: 0.7
+
+measured_occlusion_radius: 0.01
+measured_occlusion_threshold: 0.03
+modeled_occlusion_radius: 0.01
+modeled_occlusion_threshold: 0.03
+
+visualize_pose_result: 0
+visualize_gradient_optimization: 0
+visualize_hessian_optimization: 0
+visualize_correspondences_correspondence: 0
+visualize_correspondences_optimization: 0
+visualize_points_result: 0
+visualize_points_depth_image_result: 0
+visualize_points_silhouette_rendering_result: 0
+visualize_points_depth_rendering_result: 0
+visualization_min_depth: 0.0
+visualization_max_depth: 1.0
+display_visualization: 1
+save_visualizations: 0
+save_directory: "./"
+save_image_type: "png"

@@ -1,0 +1,9 @@
+%YAML:1.2
+model_path: "./depth_model.bin"
+sphere_radius: 0.4
+n_divides: 2
+n_points: 10
+max_radius_depth_offset: 0.05
+stride_depth_offset: 0.002
+use_random_seed: 0
+image_size: 500
