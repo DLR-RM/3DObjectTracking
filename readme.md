@@ -13,7 +13,7 @@ Stoiber M, Pfanne M, Strobl KH, Triebel R, Albu-Schäffer A (2022) SRT3D: A Spar
 * [__ICG__](https://github.com/DLR-RM/3DObjectTracking/tree/master/ICG)
 Stoiber M, Sundermeyer M, Triebel R (2022) Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects. In: Conference on Computer Vision and Pattern Recognition
 * [__ICG+__](https://github.com/DLR-RM/3DObjectTracking/tree/master/ICG+)
-Manuel Stoiber, Mariam Elsayed, Anne E. Reichert, Florian Steidle, Dongheui Lee, and Rudolph Triebel (2023) Fusing Visual Appearance and Geometry for Multi-modality 6DoF Object Tracking. Submitted to: IEEE/RSJ International Conference on Intelligent Robots 2023
+Stoiber M, Elsayed M, Reichert AE, Steidle F, Lee D, and Triebel R (2023) Fusing Visual Appearance and Geometry for Multi-modality 6DoF Object Tracking. Submitted to: IEEE/RSJ International Conference on Intelligent Robots 2023
 * [__Mb-ICG__](https://github.com/DLR-RM/3DObjectTracking/tree/master/Mb-ICG)
 Stoiber M, Sundermeyer M, Boerdijk W, Triebel R (2023) A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures. Submitted to: IEEE Transactions on Pattern Analysis and Machine Intelligence
 * [__M3T__](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T)
