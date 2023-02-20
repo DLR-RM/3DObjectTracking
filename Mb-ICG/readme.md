@@ -88,7 +88,7 @@ If you would like to reproduce results from our publication or use the tracker i
 The [code](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T/examples) in `examples/evaluate_RTB_dataset.cpp` and `examples/parameters_study_RTB.cpp` was used for the evaluation on the [RTB dataset](https://zenodo.org/record/7548537).
 To reproduce results, please download the dataset and adjust the `dataset_directory` in the source code.
 Files for sparse viewpoint models will be created automatically and are stored in the specified `external_directory`.
-To reproduce the evaluation results of *DART* on the *RTB* dataset, please unzip the `data/rtb_poses.zip` file and store its content in the respective `external_directory`.
+To reproduce the evaluation results of *DART* on the *RTB* dataset, please unzip the `data/rtb_poses.zip` file from the following [folder](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T/data) and store its content in the respective `external_directory`.
 In the code, you can then set `evaluator.set_evaluate_external(true);` and `evaluator.set_external_results_folder("dart");`.
 Convergence experiments for the proposed constraints can be reproduced using `examples/constraint_convergence.cpp`.
 To evaluate orthogonality constraints, which ensure that axes of reference frames are orthogonal, set the parameter in `include/m3t/constaint.h` to `kOrthogonalityConstraintExperiment = true`.
@@ -101,7 +101,7 @@ If you find our work useful, please cite us with:
 
 ```
 @Article{Stoiber_2023_TPAMI,
-  	author = {Stoiber, Manuel and Sundermeyer, Martin and Boerdijk, Wout and Triebel, Rudolph},
+    author = {Stoiber, Manuel and Sundermeyer, Martin and Boerdijk, Wout and Triebel, Rudolph},
     title  = {A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures},
     year   = {2023},
 }
