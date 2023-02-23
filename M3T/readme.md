@@ -298,7 +298,7 @@ More details can be found in the following publications:
 
 - **Fusing Visual Appearance and Geometry for Multi-Modality 6DoF Object Tracking**  
     Manuel Stoiber, Mariam Elsayed, Anne E. Reichert, Florian Steidle, Dongheui Lee, and Rudolph Triebel  
-    Submitted to IEEE/RSJ International Conference on Intelligent Robots 2023
+    Submitted to IEEE/RSJ International Conference on Intelligent Robots 2023: [paper](https://arxiv.org/abs/2302.11458)
 
 - **Iterative Corresponding Geometry: Fusing Region and Depth for Highly Efficient 3D Tracking of Textureless Objects**  
     Manuel Stoiber, Martin Sundermeyer, and Rudolph Triebel  

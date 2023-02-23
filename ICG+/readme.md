@@ -3,7 +3,8 @@
 ## Paper
 Fusing Visual Appearance and Geometry for Multi-modality 6DoF Object Tracking  
 Manuel Stoiber, Mariam Elsayed, Anne E. Reichert, Florian Steidle, Dongheui Lee, Rudolph Triebel  
-Submitted to IEEE/RSJ International Conference on Intelligent Robots (IROS) 2023
+Submitted to IEEE/RSJ International Conference on Intelligent Robots (IROS) 2023  
+[preprint](https://arxiv.org/pdf/2302.11458.pdf)
 
 ## Abstract
 In many applications of advanced robotic manipulation, six degrees of freedom (6DoF) object pose estimates are continuously required. In this work, we develop a multi-modality tracker that fuses information from visual appearance and geometry to estimate object poses. The algorithm extends our previous method ICG, which uses geometry, to additionally consider surface appearance. In general, object surfaces contain local characteristics from text, graphics, and patterns, as well as global differences from distinct materials and colors. To incorporate this visual information, two modalities are developed. For local characteristics, keypoint features are used to minimize distances between points from keyframes and the current image. For global differences, a novel region approach is developed that considers multiple regions on the object surface. In addition, it allows the modeling of external geometries. Experiments on the YCB-Video and OPT datasets demonstrate that our approach ICG+ performs best on both datasets, outperforming both conventional and deep learning-based methods. At the same time, the algorithm is highly efficient and runs at more than 300 Hz. The source code of our tracker is publicly available.
