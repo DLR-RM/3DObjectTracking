@@ -118,6 +118,8 @@ class RegionModality {
   bool imshow_result() const;
   bool set_up() const;
 
+  float probability_;
+
  private:
   // Helper methods for precalculation of internal data
   void PrecalculateFunctionLookup();

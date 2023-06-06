@@ -301,6 +301,7 @@ bool RegionModality::CalculatePoseUpdate(int corr_iteration,
   gradient.setZero();
   hessian.setZero();
 
+  probability_ = 0;
   // Iterate over correspondence lines
   for (auto &data_line : data_lines_) {
     // Calculate point coordinates in camera frame
@@ -356,8 +357,12 @@ bool RegionModality::CalculatePoseUpdate(int corr_iteration,
     ddelta_cs_dtheta /= data_line.standard_deviation;
     hessian.triangularView<Eigen::Lower>() -=
         ddelta_cs_dtheta.transpose() * ddelta_cs_dtheta;
+    
+    probability_ += data_line.distribution[distribution_length_plus_1_half_];
   }
   hessian = hessian.selfadjointView<Eigen::Lower>();
+
+  probability_ /= std::max(int(data_lines_.size()), 1); // mean probability
 
   // Optimize and update pose
   Eigen::FullPivLU<Eigen::Matrix<float, 6, 6>> lu{tikhonov_matrix_ - hessian};
