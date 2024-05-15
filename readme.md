@@ -1,5 +1,13 @@
 # 3D Object Tracking
 
+## Agimus Fork
+
+This is an [Agimus-Project](https://github.com/agimus-project) for of <https://github.com/DLR-RM/3DObjectTracking>, to
+workaround a blocking packaging issue about required xfeatures2d component in OpenCV not being packaged by Debian /
+Ubuntu / ROS.
+
+## Original README
+
 Tracking objects and kinematic structures in 3D space and determining their poses and configurations is an essential task in computer vision. Its application ranges from augmented reality to robotic perception. Given consecutive image frames, as well as 3D meshes and kinematic information, the goal is to robustly estimate the rotation and translation of all bodies relative to a camera. While the problem has been thoroughly studied, many challenges such as partial occlusions, appearance changes, motion blur, background clutter, object ambiguity, and real-time requirements still exist.
 
 In this repository, we will continuously publish algorithms and code of our ongoing research on 3D object tracking. The folders for the different algorithms include everything necessary to reproduce results presented in our papers. Note that the code for each new paper also includes an updated version of previous work. If you want to use our tracker in your own project or application, please use the code from the latest publication. Currently, the latest version of our code can be found in the folder [__M3T__](https://github.com/DLR-RM/3DObjectTracking/tree/master/M3T).
@@ -25,7 +33,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 <a href="https://youtu.be/0ORZvDDbDjA">
 <p align="center">
  <img src="Mb-ICG/dlr_mb_icg_real_world.png" width=600>
-    <br> 
+    <br>
     <em>A Multi-body Tracking Framework - From Rigid Objects to Kinematic Structures</em>
 </p>
 </a>
@@ -33,7 +41,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 <a href="https://www.youtube.com/watch?v=NfNzxXupX54">
 <p align="center">
  <img src="ICG+/dlr_icg+_video.png" width=600>
-    <br> 
+    <br>
     <em>Fusing Visual Appearance and Geometry for Multi-Modality 6DoF Object Tracking</em>
 </p>
 </a>
@@ -41,7 +49,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 <a href="https://www.youtube.com/watch?v=eYd_3TnJIaE">
 <p align="center">
  <img src="ICG/dlr_icg_video_presentation.png" width=600>
-    <br> 
+    <br>
     <em>Presentation CVPR 2022</em>
 </p>
 </a>
@@ -49,7 +57,7 @@ Stoiber M (2023) Closing the Loop: 3D Object Tracking for Advanced Robotic Manip
 <a href="https://youtu.be/qMr1RHCsnDk">
 <p align="center">
  <img src="ICG/dlr_icg_video_real-world.png" width=600>
-    <br> 
+    <br>
     <em>Iterative Corresponding Geometry</em>
 </p>
 </a>
