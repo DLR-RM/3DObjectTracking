@@ -745,6 +745,7 @@ void TextureModality::SetUpFeatureDetectorAndMatcher() {
       feature_descriptor_ = cv::BRISK::create(brisk_threshold_, brisk_octave_,
                                               brisk_pattern_scale_);
       break;
+#ifdef USE_XFEATURES2D
     case DescriptorType::DAISY:
       feature_detector_ =
           cv::ORB::create(orb_n_features_, orb_scale_factor_, orb_n_levels_);
@@ -769,6 +770,7 @@ void TextureModality::SetUpFeatureDetectorAndMatcher() {
           sift_n_features_, sift_n_octave_layers_, sift_contrast_threshold_,
           sift_edge_threshold_, sift_sigma_);
       break;
+#endif
 #ifdef USE_CUDA
     case DescriptorType::ORB_CUDA:
       feature_detector_orb_cuda_ = cv::cuda::ORB::create(

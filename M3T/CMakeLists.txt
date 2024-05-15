@@ -10,6 +10,7 @@ project(M3T)
 option(USE_AZURE_KINECT "Use Azure Kinect" ON)
 option(USE_REALSENSE "Use RealSense D435" ON)
 option(USE_GTEST "Use gtest" ON)
+option(USE_XFEATURES2D "Use OpenCV xfeatures2d" OFF)
 
 
 # Libraries
@@ -32,7 +33,14 @@ if (UNIX)
 endif ()
 find_package(OpenGL REQUIRED)
 find_package(glfw3 3.1.2 REQUIRED)
-find_package(OpenCV 4.3.0 REQUIRED COMPONENTS core imgproc highgui imgcodecs calib3d features2d xfeatures2d OPTIONAL_COMPONENTS cudafeatures2d)
+
+set(OpenCV_COMPONENTS core imgproc highgui imgcodecs calib3d features2d)
+if(USE_XFEATURES2D)
+    add_definitions( -DUSE_XFEATURES2D=TRUE )
+    set(OpenCV_COMPONENTS ${OpenCV_COMPONENTS} xfeatures2d)
+endif()
+
+find_package(OpenCV 4.3.0 REQUIRED COMPONENTS ${OpenCV_COMPONENTS} OPTIONAL_COMPONENTS cudafeatures2d)
 
 if (USE_AZURE_KINECT)
     find_package(k4a 1.3.0 REQUIRED)
@@ -122,7 +130,7 @@ if (USE_REALSENSE)
     add_definitions( -DUSE_REALSENSE=TRUE )
 endif ()
 if(OpenCV_CUDA_VERSION)
-    add_definitions( -DUSE_CUDA=TRUE ) 
+    add_definitions( -DUSE_CUDA=TRUE )
 endif ()
 if (USE_GTEST)
     add_definitions( -DUSE_GTEST=TRUE )
