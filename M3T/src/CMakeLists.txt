@@ -81,7 +81,7 @@ endif ()
 
 # Define libraries
 # =============================================================================
-set(LIBRARIES Eigen3::Eigen OpenGL::GL GLEW::GLEW glfw ${OpenCV_LIBRARIES})
+set(LIBRARIES Eigen3::Eigen OpenGL::GL GLEW::GLEW glfw ${OpenCV_LIBRARIES} OpenMP::OpenMP_CXX)
 if (UNIX)
     list(APPEND LIBRARIES pthread stdc++fs)
 endif ()
