@@ -23,7 +23,9 @@
 #include <deque>
 #include <opencv2/features2d.hpp>
 #include <opencv2/opencv.hpp>
+#ifdef USE_XFEATURES2D
 #include <opencv2/xfeatures2d.hpp>
+#endif
 #include <string>
 #include <vector>
 
